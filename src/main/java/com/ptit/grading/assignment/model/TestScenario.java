@@ -4,8 +4,10 @@ import com.ptit.grading.common.model.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
+import org.hibernate.type.SqlTypes;
 import java.util.UUID;
 
 @Entity
@@ -35,15 +37,15 @@ public class TestScenario extends BaseEntity {
     private String endpoint;
 
     @Column(columnDefinition = "jsonb")
-    @JdbcTypeCode(jakarta.persistence.SqlTypes.JSON)
+    @JdbcTypeCode(SqlTypes.JSON)
     private String queryParams;
 
     @Column(columnDefinition = "jsonb")
-    @JdbcTypeCode(jakarta.persistence.SqlTypes.JSON)
+    @JdbcTypeCode(SqlTypes.JSON)
     private String requestBody;
 
     @Column(columnDefinition = "jsonb")
-    @JdbcTypeCode(jakarta.persistence.SqlTypes.JSON)
+    @JdbcTypeCode(SqlTypes.JSON)
     private String expectedResponseBody;
 
     private Integer expectedStatus = 200;
