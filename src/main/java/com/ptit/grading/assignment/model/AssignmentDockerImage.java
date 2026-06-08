@@ -4,6 +4,7 @@ import com.ptit.grading.common.model.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import java.util.UUID;
 
 @Entity
 @Table(name = "assignment_docker_images")

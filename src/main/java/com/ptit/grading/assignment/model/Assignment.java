@@ -4,6 +4,9 @@ import com.ptit.grading.common.model.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
+import java.util.UUID;
 
 @Entity
 @Table(name = "assignments")
