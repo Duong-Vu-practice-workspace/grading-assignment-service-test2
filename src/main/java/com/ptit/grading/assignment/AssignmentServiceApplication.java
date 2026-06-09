@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@EntityScan("com.ptit.grading.common.model")
+@EntityScan({"com.ptit.grading.common.model", "com.ptit.grading.assignment.model"})
 @ComponentScan(basePackages = {"com.ptit.grading.assignment", "com.ptit.grading.common"})
 public class AssignmentServiceApplication {
 
